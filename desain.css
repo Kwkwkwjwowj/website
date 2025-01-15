@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #1e90ff;
+}
+
+.product {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.product h2 {
+  color: #1e90ff;
+}
+
+.product p {
+  font-size: 1.2em;
+}
+
+.product button {
+  background-color: #1e90ff;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease;
+  margin-top: 20px;
+}
+
+.product button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+.product button:hover {
+  background-color: #4682b4;
+  transform: scale(1.1); /* Memberikan efek zoom in saat hover */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin-top: 40px;
+  font-size: 1em;
+}
+
+.notification {
+  position: fixed;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.notification.hide {
+  opacity: 0;
+}
+
+.dots {
+  font-weight: bold;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  font-size: 1.5em;
+  animation: dot-bounce 1s infinite ease-in-out;
+}
+
+.dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Efek zoom saat produk dipilih */
+.product.zoomed {
+  transform: scale(1.05); /* Membesarkan kotak produk */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
